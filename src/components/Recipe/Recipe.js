@@ -5,7 +5,8 @@ import React from 'react';
                     calories, 
                     image,
                     servings,
-                    time
+                    time,
+                    ingredients
                 }) => {
     return (
         <div>
@@ -17,6 +18,14 @@ import React from 'react';
         {title && time > 0 ?  <p>Takes about {time} min to make.</p> 
         : null 
         } 
+
+       <ol>
+        {ingredients.map(ing => (
+            <li>{ing.text}</li>
+        ))}
+       </ol>
+       
+
         </div>
     )
 }
