@@ -1,0 +1,15 @@
+.search-box{
+    border:1px solid dimgrey;
+    height: 28px;
+}
+
+.btn-search{
+    color:mintcream;
+    font-weight: bold;
+    background-color: dodgerblue;
+    height: 28px;
+    width: 88px;
+    margin: 8px;
+  
+    text-shadow: 2px 0px 2px rgba(67,59,59,0.6);
+}

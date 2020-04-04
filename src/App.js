@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import Form from './components/Form/Form';
+
+import Footer from './components/Footer/Footer';
 import './App.css';
 
+
 function App() {
+  
+
+  //example request with filters  "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
+
+  //https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}
+
+  //const request = `https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
+
+ 
+
+  
+   
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Eat me</h1>
+     
+     <Form />
+    
+     <Footer />
     </div>
   );
 }
