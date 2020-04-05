@@ -30,8 +30,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
                 </Card.Text>
                  : null 
                 } 
-            
-        
          <ListGroup className="list-group-flush">
        
                 {ingredients.map(ing => (
