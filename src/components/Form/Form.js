@@ -10,8 +10,10 @@ import Axios from 'axios';
 
 function Form() {
    //move these constants to an .env file and add to .gitignore
-    const APP_ID = "267c58c7";
-    const APP_KEY = "dbbf068a8f2e35a9be49a54c7d2c3441";
+    const APP_ID = process.env.REACT_APP_ID;
+    console.log(APP_ID);
+    const APP_KEY = process.env.REACT_APP_EDAMAN;
+    console.log(APP_KEY)
 
     const [recipes, setRecipes] = useState([]);
     const [search, setSearch] = useState("");

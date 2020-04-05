@@ -19,13 +19,19 @@ import ListGroup from 'react-bootstrap/ListGroup';
          <Card.Body>
           <Card.Title>{title}</Card.Title>
             <Card.Text>
-                <p>Calories: {Math.round(calories)}</p>
-                <p>Serves {servings}</p>
-                {title && time > 0 ?  <p>Takes about {time} min to make.</p> 
+                Calories: {Math.round(calories)}
+            </Card.Text>   
+            <Card.Text>
+             Serves {servings}
+            </Card.Text>
+                {title && time > 0 ?  
+                <Card.Text>
+                    Takes about {time} min to make.
+                </Card.Text>
                  : null 
                 } 
-            </Card.Text>
-         </Card.Body>
+            
+        
          <ListGroup className="list-group-flush">
        
                 {ingredients.map(ing => (
@@ -33,7 +39,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
             ))}
         
         </ListGroup>   
-            
+        </Card.Body>
        </Card>
     </>
     )
