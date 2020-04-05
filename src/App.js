@@ -1,7 +1,9 @@
 import React from 'react';
 import Form from './components/Form/Form';
-
 import Footer from './components/Footer/Footer';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './App.css';
 
 
@@ -20,13 +22,32 @@ function App() {
    
 
   return (
-    <div className="App">
-      <h1>Eat me</h1>
-     
-     <Form />
     
-     <Footer />
-    </div>
+      <Container fluid className="App">
+        <Row>
+          <Col>
+          <h1>Eat me</h1>
+          </Col>
+        </Row>
+      
+     
+        <Row>
+          <Col>
+          <Form />
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+          <Footer />
+          </Col>
+        </Row>
+
+    
+     
+
+     </Container>
+   
   );
 }
 
