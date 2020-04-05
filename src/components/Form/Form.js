@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import Recipe from '../Recipe/Recipe';
+import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 import './form.css';
 import Axios from 'axios';
 
@@ -48,7 +50,7 @@ function Form() {
     }
     
     return (
-        <div>
+        <>
             <form className="form-search" onSubmit={getSearch}>
                 <input 
                     className="search-box" 
@@ -64,6 +66,8 @@ function Form() {
                        Search
                     </button>
             </form>
+
+            <Row>
             {recipes.map(recipe => (
                   <Recipe 
                     key={recipe.recipe.label + recipe.recipe.source}
@@ -75,7 +79,8 @@ function Form() {
                     ingredients={recipe.recipe.ingredients}
                   />
             ))}
-        </div>
+            </Row>
+        </>
     )
 }
 
