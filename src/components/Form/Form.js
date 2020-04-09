@@ -5,14 +5,15 @@ import Row from 'react-bootstrap/Row';
 import './form.css';
 import Axios from 'axios';
 
+//require('dotenv').config();
 
+const appId  = process.env.REACT_APP_EDAMAMID; 
 
 
 function Form() {
    //move these constants to an .env file and add to .gitignore
-    //const EATITUP_ID=267c58c7;
-    //console.log(APP_ID);
-    //const APP_KEY = dbbf068a8f2e35a9be49a54c7d2c3441;
+  
+    const appKey = process.env.REACT_APP_EDAMAMKEY;
     //console.log(APP_KEY)
 
     const [recipes, setRecipes] = useState([]);
@@ -27,7 +28,7 @@ function Form() {
       const getRecipes = () =>{
          // const response = 
           Axios
-            .get(`https:api.edamam.com/search?q=${query}&app_id=267c58c7&app_key=dbbf068a8f2e35a9be49a54c7d2c3441`)
+            .get(`https:api.edamam.com/search?q=${query}&app_id=${appId}&app_key=dbbf068a8f2e35a9be49a54c7d2c3441`)
                 .then(res => {
                     console.log("axios get", res.data.hits);
                     setRecipes(res.data.hits);
