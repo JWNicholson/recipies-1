@@ -24,7 +24,7 @@ function Form() {
     const getRecipes = () =>{
       // const response = 
        Axios
-         .get(`https:api.edamam.com/search?q=${query}&app_id=${appId}&app_key=dbbf068a8f2e35a9be49a54c7d2c3441`)
+         .get(`https:api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}`)
              .then(res => {
                  console.log("axios get", res.data.hits);
                  setRecipes(res.data.hits);
