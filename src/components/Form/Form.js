@@ -10,10 +10,10 @@ import Axios from 'axios';
 
 function Form() {
    //move these constants to an .env file and add to .gitignore
-    const APP_ID = process.env.REACT_APP_ID;
-    console.log(APP_ID);
-    const APP_KEY = process.env.REACT_APP_EDAMAN;
-    console.log(APP_KEY)
+    //const EATITUP_ID=267c58c7;
+    //console.log(APP_ID);
+    //const APP_KEY = dbbf068a8f2e35a9be49a54c7d2c3441;
+    //console.log(APP_KEY)
 
     const [recipes, setRecipes] = useState([]);
     const [search, setSearch] = useState("");
@@ -27,9 +27,9 @@ function Form() {
       const getRecipes = () =>{
          // const response = 
           Axios
-            .get(`https:api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
+            .get(`https:api.edamam.com/search?q=${query}&app_id=267c58c7&app_key=dbbf068a8f2e35a9be49a54c7d2c3441`)
                 .then(res => {
-                    console.log("axios", res.data.hits);
+                    console.log("axios get", res.data.hits);
                     setRecipes(res.data.hits);
                     
                 })
@@ -72,7 +72,7 @@ function Form() {
             <Row>
             {recipes.map(recipe => (
                   <Recipe 
-                    key={recipe.recipe.label + recipe.recipe.source}
+                    // key={recipe.recipe.label + recipe.recipe.source}
                     title={recipe.recipe.label}
                     calories={recipe.recipe.calories}
                     image={recipe.recipe.image}
@@ -82,6 +82,7 @@ function Form() {
                   />
             ))}
             </Row>
+
         </>
     )
 }

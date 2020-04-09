@@ -2,23 +2,22 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-
-
- const Recipe = ({
-                    title, 
-                    calories, 
-                    image,
-                    servings,
-                    time,
-                    ingredients
-                }) => {
+const Recipe = (
+   { title, 
+    image,
+    servings,
+     calories, 
+    time,
+    ingredients
+}
+) => {
     return (
-    <>
-        <Card border="dark" style={{ width: '24rem' }}>
+        <>
+     <Card border="dark" style={{ width: '24rem' }}>
             <Card.Img variant="top" src={image} />
          <Card.Body>
           <Card.Title>{title}</Card.Title>
-            <Card.Text>
+             <Card.Text>
                 Calories: {Math.round(calories)}
             </Card.Text>   
             <Card.Text>
@@ -36,11 +35,12 @@ import ListGroup from 'react-bootstrap/ListGroup';
                 <ListGroup.Item>{ing.text}</ListGroup.Item>
             ))}
         
-        </ListGroup>   
+        </ListGroup>    
         </Card.Body>
-       </Card>
+       </Card> 
+
     </>
-    )
+    );
 }
 
 export default Recipe;
